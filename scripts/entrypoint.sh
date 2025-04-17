@@ -3,7 +3,7 @@ set -e
 
 # Generate environment script at runtime to capture passed ENV variables
 echo "#!/bin/sh" > /app/wal-g-environment.sh
-env | grep -E "^(WALG_|PG)" | while IFS= read -r line; do
+env | grep -E "^(WALG_|PG|MYSQL_)" | while IFS= read -r line; do
   echo "export $line" >> /app/wal-g-environment.sh
 done
 chmod +x /app/wal-g-environment.sh

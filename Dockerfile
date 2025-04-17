@@ -1,11 +1,6 @@
 FROM debian:bookworm-slim
 
 ENV WALG_FILE_PREFIX=/backups \
-    PGHOST=database \
-    PGPORT=5432 \
-    PGUSER=user \
-    PGPASSWORD=secret \
-    PGDATABASE=database \
     CRON_SCHEDULE="0 * * * *"
 
 WORKDIR /app

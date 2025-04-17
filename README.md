@@ -1,6 +1,6 @@
-# PostgreSQL Backup Service
+# Dockerized Database Backup
 
-Automated PostgreSQL database backup solution using WAL-G.
+Automated database backup solution using WAL-G.
 
 ## Usage
 
@@ -31,6 +31,7 @@ volumes:
 
 - `WALG_FILE_PREFIX`: Backup storage location
 - `PGHOST`, `PGPORT`, `PGUSER`, `PGPASSWORD`, `PGDATABASE`: PostgreSQL connection details
+- `MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`: MySQL connection details
 - `CRON_SCHEDULE`: Backup frequency (cron format)
 
 ## Operation
